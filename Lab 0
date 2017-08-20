@@ -1,0 +1,27 @@
+# Lab 0 - Set up the env
+
+## Clone Source
+
+1. Download the app source code, by cloning Git Repo
+```
+> mkdir DotNetWorkshop
+> cd DotNet-Core-SteelToe-Workshop
+> git clone https://github.com/ddieruf/dotnet-core-fortuneteller
+> cd dotnet-core-fortuneteller
+```
+2. Open the source code directory /DotNet-Core-SteelToe-Workshop/FortuneTeller in your perferred IDE (all examples will use VS Code)
+
+
+## Review App Architecture
+
+1. Data storage - Notice in the services app /Services/Startup.cs, a data context of "InMemory" is created. This will (initially) be used to store the Fortunes.
+
+![alt text][vsCodeStartupCs]
+2. Entity framework - The services app is utilizing EntityFrameworkCore /Services/models/Fortune.cs, with a single entity of Fortune.
+
+![alt text][vsCodeFortuneCs]
+3. Microservice endpoints - The services app has 6 endpoints /Services/Controllers/FortuneController.cs: GET /fortunes, GET /random, GET /{fortuneId}, POST fortune, PUT /{fortuneId}, DELETE /{fortuneId}
+
+![alt text][vsCodeFortuneControllerCs]
+
+## Review Manifest
